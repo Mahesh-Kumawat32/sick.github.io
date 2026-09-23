@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SICK // Haute Streetwear & Aesthetic Beauty</title>
+  <meta name="description" content="SICK is an avant-garde streetwear & aesthetic beauty label featuring heavyweight graphic t-shirts, luxury shirts, distressed outerwear, and minimalist unisex cosmetics.">
+
+  <!-- Typography: Syne (Haute Editorial) & Plus Jakarta Sans (Clean Modern) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar & Infinite Ticker -->
+  <div class="announcement-bar">
+    <div class="ticker-track">
+      <div class="ticker-item">
+        <span>⚡ MIDNIGHT DROP IS LIVE</span>
+        <span class="ticker-dot"></span>
+        <span>UP TO 50% OFF SELECT ESSENTIALS</span>
+        <span class="ticker-dot"></span>
+        <span>USE CODE: <strong>SICK40</strong> FOR EXTRA 40% OFF</span>
+        <span class="ticker-dot"></span>
+        <span>FREE WORLDWIDE EXPRESS SHIPPING OVER $120</span>
+        <span class="ticker-dot"></span>
+        <span>NEW UNISEX BEAUTY & FRAGRANCE COLLECTION OUT NOW</span>
+        <span class="ticker-dot"></span>
+      </div>
+      <div class="ticker-item">
+        <span>⚡ MIDNIGHT DROP IS LIVE</span>
+        <span class="ticker-dot"></span>
+        <span>UP TO 50% OFF SELECT ESSENTIALS</span>
+        <span class="ticker-dot"></span>
+        <span>USE CODE: <strong>SICK40</strong> FOR EXTRA 40% OFF</span>
+        <span class="ticker-dot"></span>
+        <span>FREE WORLDWIDE EXPRESS SHIPPING OVER $120</span>
+        <span class="ticker-dot"></span>
+        <span>NEW UNISEX BEAUTY & FRAGRANCE COLLECTION OUT NOW</span>
+        <span class="ticker-dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Glass Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-area">
+        <a href="#" class="logo">
+          SICK<span>.</span>
+          <span class="logo-tag">STUDIO</span>
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#catalog" class="nav-link active">All Apparel</a></li>
+          <li><a href="#catalog" class="nav-link" onclick="setTimeout(()=>document.querySelector('[data-filter=t-shirts]').click(), 100)">T-Shirts</a></li>
+          <li><a href="#catalog" class="nav-link" onclick="setTimeout(()=>document.querySelector('[data-filter=shirts]').click(), 100)">Shirts</a></li>
+          <li><a href="#catalog" class="nav-link" onclick="setTimeout(()=>document.querySelector('[data-filter=outerwear]').click(), 100)">Outerwear</a></li>
+          <li><a href="#beauty" class="nav-link">Beauty & Care</a></li>
+          <li>
+            <a href="#sale" class="nav-link sale-link">
+              <span class="badge-pulse"></span>
+              Offers & Sale
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Wishlist Indicator -->
+        <button class="nav-icon-btn" id="navWishlistBtn" title="Saved Wishlist" onclick="showToast('Your saved wishlist contains 2 exclusive items ❤️', 'lime')">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger Button -->
+        <button class="nav-icon-btn" id="cartBtnTrigger" title="Shopping Bag">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span class="badge-count" id="cartBadge">1</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section: Dynamic Multi-Image Auto-Rotating Showcase -->
+  <section class="hero-section">
+    <div class="hero-slider">
+      <!-- Slide 1: Cyber Streetwear & Acid Graphic Tees -->
+      <div class="hero-slide active">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1900&q=85');"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">⚡ Drop 04 // Autumn Cyber</div>
+          <h1 class="hero-title">
+            Wear The <span class="highlight-fill">Raw</span> Energy.<br>
+            <span class="highlight-text">Never Settle.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Engineered heavyweight graphic tees, boxy silhouettes, and avant-garde streetwear tailored for individuals who command presence.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalog" class="btn btn-primary">Shop T-Shirts & Tops</a>
+            <a href="#sale" class="btn btn-sale">Claim 50% Flash Sale</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Luxury Oversized Shirts & Contemporary Tailoring -->
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1900&q=85');"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">✨ Bespoke Tailoring & Shirts</div>
+          <h1 class="hero-title">
+            Architectural <span class="highlight-fill">Shirts</span><br>
+            <span class="highlight-text">Redefined.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Fluid rayon camp shirts, brushed twill utility overshirts, and relaxed luxury collars made for effortless high-contrast layering.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalog" class="btn btn-primary" onclick="setTimeout(()=>document.querySelector('[data-filter=shirts]').click(), 100)">Explore Shirts</a>
+            <a href="#sale" class="btn btn-secondary">View Special Offers</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Avant-Garde Outerwear & Distressed Cargo -->
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1900&q=85');"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">❄️ Outerwear & Apparel</div>
+          <h1 class="hero-title">
+            Built For The <span class="highlight-fill">Elements</span>.<br>
+            <span class="highlight-text">Sub-Zero Heat.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Tactical waterproof ripstop puffers, vintage burnished leather moto jackets, and articulated combat cargos designed without compromise.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#catalog" class="btn btn-primary" onclick="setTimeout(()=>document.querySelector('[data-filter=outerwear]').click(), 100)">Shop Outerwear</a>
+            <a href="#sale" class="btn btn-sale">50% Off Winter Sale</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4: Unisex SICK Beauty & Bio-Aesthetic Fragrances -->
+      <div class="hero-slide">
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1900&q=85');"></div>
+        <div class="slide-overlay"></div>
+        <div class="hero-content">
+          <div class="hero-tag">🧴 SICK Cosmetics & Scent</div>
+          <h1 class="hero-title">
+            Aesthetic <span class="highlight-fill">Glow</span>.<br>
+            <span class="highlight-text">Nocturne Unisex.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Minimalist botanical serums, smoky amber unisex perfumes, and glassy peptide lip glaze to elevate your everyday presence.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#beauty" class="btn btn-primary">Discover Beauty Drop</a>
+            <a href="#catalog" class="btn btn-secondary">Browse All Categories</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Statistics Badge -->
+    <div class="hero-stats">
+      <div class="hero-stat-item">
+        <span class="stat-number">40K<span>+</span></span>
+        <span class="stat-label">Worldwide Cult Followers</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="stat-number">100<span>%</span></span>
+        <span class="stat-label">Heavyweight Sustainable Cotton</span>
+      </div>
+      <div class="hero-stat-item">
+        <span class="stat-number">4.9<span>★</span></span>
+        <span class="stat-label">Verified Customer Rating</span>
+      </div>
+    </div>
+
+    <!-- Slider Timeline & Arrow Navigation Controls -->
+    <div class="hero-controls">
+      <div class="slider-indicators">
+        <div class="slider-dot active" title="Slide 1"><div class="dot-progress"></div></div>
+        <div class="slider-dot" title="Slide 2"><div class="dot-progress"></div></div>
+        <div class="slider-dot" title="Slide 3"><div class="dot-progress"></div></div>
+        <div class="slider-dot" title="Slide 4"><div class="dot-progress"></div></div>
+      </div>
+      <button class="slider-arrow-btn" id="heroPrevBtn" aria-label="Previous Slide">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+      <button class="slider-arrow-btn" id="heroNextBtn" aria-label="Next Slide">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Flash Sale & Special Offers Section -->
+  <section class="sale-section" id="sale">
+    <div class="container">
+      <div class="sale-header-box">
+        <div class="sale-title-wrap">
+          <div class="sale-badge-hot">🔥 Limited Time Flash Drop</div>
+          <h2 class="section-title">Exclusive Deals & Offers</h2>
+          <p class="section-subtitle">
+            High-voltage discounts on limited-stock essentials. Once these limited runs sell out, they will not restock.
+          </p>
+        </div>
+
+        <!-- Live Real-Time Ticking Countdown Timer -->
+        <div class="countdown-box">
+          <span class="countdown-title">Offer Ends In:</span>
+          <div class="countdown-timer">
+            <div class="time-unit">
+              <span class="time-val" id="timerHours">08</span>
+              <span class="time-label">Hrs</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-unit">
+              <span class="time-val" id="timerMins">45</span>
+              <span class="time-label">Mins</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-unit">
+              <span class="time-val" id="timerSecs">18</span>
+              <span class="time-label">Secs</span>
+            </div>
+            <span class="time-sep">:</span>
+            <div class="time-unit ms">
+              <span class="time-val" id="timerMs">89</span>
+              <span class="time-label">Ms</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clickable Coupon Promo Banner -->
+      <div class="coupon-promo-bar">
+        <div class="coupon-info">
+          <span class="coupon-icon">🎁</span>
+          <div>
+            <strong>SPECIAL VIP PROMO CODE:</strong>
+            <span style="color: var(--text-muted); font-size: 0.88rem; margin-left: 6px;">
+              Get an instant additional 40% OFF applied at checkout.
+            </span>
+          </div>
+        </div>
+        <div class="coupon-code-badge" id="couponBadge" title="Click to apply automatically">
+          <span>CODE: SICK40</span>
+          <span>⚡ (TAP TO APPLY)</span>
+        </div>
+      </div>
+
+      <!-- Sale Products Grid -->
+      <div class="sale-grid" id="saleGrid">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Product Catalog & All Apparel Section -->
+  <section class="catalog-section" id="catalog">
+    <div class="container">
+      <div class="catalog-header">
+        <span style="color: var(--accent-lime); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;">
+          Curated Wardrobe & Aesthetics
+        </span>
+        <h2 class="section-title" style="margin-top: 0.5rem;">Explore All Categories</h2>
+        <p class="section-subtitle" style="max-width: 600px;">
+          Filter effortlessly through our heavyweight t-shirts, tailored camp shirts, utilitarian outerwear, and unisex beauty products.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="tab-btn active" data-filter="all">All Products</button>
+          <button class="tab-btn" data-filter="t-shirts">T-Shirts</button>
+          <button class="tab-btn" data-filter="shirts">Shirts</button>
+          <button class="tab-btn" data-filter="outerwear">Outerwear & Pants</button>
+          <button class="tab-btn" data-filter="beauty">Beauty & Care</button>
+          <button class="tab-btn" data-filter="sale">🔥 Active Offers</button>
+        </div>
+      </div>
+
+      <!-- Main Dynamic Product Grid -->
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Aesthetic Editorial Lookbook & Brand Philosophy Section -->
+  <section class="lookbook-section">
+    <div class="container">
+      <div class="lookbook-grid">
+        <div class="lookbook-visual">
+          <div class="lookbook-card">
+            <img class="lookbook-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="SICK Lookbook Streetwear">
+            <div class="lookbook-tag">Studio Drop // Vol. 04</div>
+          </div>
+          <div class="lookbook-card">
+            <img class="lookbook-img" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80" alt="SICK High Fashion Aesthetic">
+            <div class="lookbook-tag">Uncompromising Silhouette</div>
+          </div>
+        </div>
+
+        <div class="lookbook-info">
+          <div class="editorial-tag">The SICK Manifest</div>
+          <h2 class="lookbook-title">NOT FOR EVERYONE.<br><span style="color: var(--accent-lime);">JUST FOR YOU.</span></h2>
+          <p class="lookbook-desc">
+            We reject the disposable nature of fast fashion. Every SICK garment begins with custom-developed, high-density fabrics, double-reinforced structural seams, and tailored drape specifications that hold their shape season after season.
+          </p>
+
+          <div class="lookbook-features">
+            <div class="feature-box">
+              <div class="feature-icon">🌿</div>
+              <h4 class="feature-title">Heavyweight Organics</h4>
+              <p class="feature-desc">100% GOTS-certified 280-320 GSM combed cotton fabrics.</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">✂️</div>
+              <h4 class="feature-title">Custom Patterned</h4>
+              <p class="feature-desc">Engineered boxy cuts with dropped shoulders and zero bunching.</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">💧</div>
+              <h4 class="feature-title">Cold Pigment Dye</h4>
+              <p class="feature-desc">Vintage wash treatments ensuring no two pieces are identical.</p>
+            </div>
+            <div class="feature-box">
+              <div class="feature-icon">✨</div>
+              <h4 class="feature-title">Bio-Cosmetics</h4>
+              <p class="feature-desc">Paraben-free, cruelty-free unisex skincare and signature scents.</p>
+            </div>
+          </div>
+
+          <a href="#catalog" class="btn btn-primary" style="width: fit-content;">Explore The New Drop</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beauty & Cosmetics Dedicated Spotlight -->
+  <section class="beauty-section" id="beauty">
+    <div class="container">
+      <div class="beauty-header-center">
+        <span style="color: var(--accent-purple); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.2em; text-transform: uppercase;">
+          Self Care // Clean Aesthetic
+        </span>
+        <h2 class="section-title" style="margin-top: 0.5rem;">SICK Beauty & Fragrance</h2>
+        <p class="section-subtitle">
+          Minimalist formulations, genderless aesthetic scent notes, and peptide-charged skincare designed to complement your daily routine.
+        </p>
+      </div>
+
+      <div class="beauty-grid" id="beautyGrid">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges & Customer Perks -->
+  <section class="perks-section">
+    <div class="container">
+      <div class="perks-grid">
+        <div class="perk-item">
+          <div class="perk-icon-wrap">⚡</div>
+          <div>
+            <h4 class="perk-title">Worldwide Express</h4>
+            <p class="perk-desc">Fast insured shipping with end-to-end live tracking.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <div class="perk-icon-wrap">🛡️</div>
+          <div>
+            <h4 class="perk-title">Secure Payments</h4>
+            <p class="perk-desc">256-bit SSL encrypted checkout with multiple payment options.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <div class="perk-icon-wrap">🔄</div>
+          <div>
+            <h4 class="perk-title">30-Day Free Returns</h4>
+            <p class="perk-desc">Hassle-free size exchanges and effortless returns.</p>
+          </div>
+        </div>
+        <div class="perk-item">
+          <div class="perk-icon-wrap">💎</div>
+          <div>
+            <h4 class="perk-title">Limited Runs</h4>
+            <p class="perk-desc">Exclusively crafted micro-batches ensuring true individuality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIP Drop Newsletter Club -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-card">
+        <h2 class="newsletter-title">Join The SICK Syndicate</h2>
+        <p class="newsletter-desc">
+          Receive 15% off your very first order, secret password-protected drop access, and private flash sale notifications before anyone else.
+        </p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" class="newsletter-input" placeholder="Enter your personal email address..." required>
+          <button type="submit" class="btn btn-primary">Claim 15% Off</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="footer-logo">
+            SICK<span>.</span>
+          </a>
+          <p class="footer-bio">
+            An avant-garde contemporary lifestyle and apparel label fusing heavyweight street aesthetics with clean personal care. Crafted for those who define the culture.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="Instagram">IG</a>
+            <a href="#" class="social-btn" title="TikTok">TK</a>
+            <a href="#" class="social-btn" title="Twitter / X">X</a>
+            <a href="#" class="social-btn" title="Discord">DC</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Apparel & Drops</h4>
+          <ul class="footer-links">
+            <li><a href="#catalog" class="footer-link">Graphic T-Shirts</a></li>
+            <li><a href="#catalog" class="footer-link">Oversized Shirts</a></li>
+            <li><a href="#catalog" class="footer-link">Puffer Jackets & Outerwear</a></li>
+            <li><a href="#catalog" class="footer-link">Tactical Cargo Pants</a></li>
+            <li><a href="#sale" class="footer-link" style="color: var(--accent-pink);">Active Flash Sales</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Beauty & Lifestyle</h4>
+          <ul class="footer-links">
+            <li><a href="#beauty" class="footer-link">Eau De Parfum</a></li>
+            <li><a href="#beauty" class="footer-link">Peptide Serums</a></li>
+            <li><a href="#beauty" class="footer-link">Lip Treatments</a></li>
+            <li><a href="#beauty" class="footer-link">Detox Clay Masks</a></li>
+            <li><a href="#beauty" class="footer-link">Clean Ingredients</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Customer Care</h4>
+          <ul class="footer-links">
+            <li><a href="#" class="footer-link" onclick="showToast('Size chart: Model is 6\'1\'\' wearing size L.', 'lime'); return false;">Size & Fit Guide</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Global express delivery takes 2-4 business days.', 'lime'); return false;">Shipping Policy</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Returns are free within 30 days of arrival.', 'lime'); return false;">Easy Exchanges</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Email support: concierge@sickstudios.com', 'lime'); return false;">Contact Concierge</a></li>
+            <li><a href="#" class="footer-link" onclick="showToast('Privacy & terms: 100% encrypted & compliant.', 'lime'); return false;">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 SICK STUDIOS GLOBAL INC. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>PRIVACY POLICY</span>
+          <span>COOKIE PREFERENCES</span>
+          <span>ACCESSIBILITY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Shopping Bag Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <div class="cart-title">
+        <span>Your Bag</span>
+        <span style="font-size: 0.8rem; color: var(--accent-lime); font-family: var(--font-body); font-weight: 700;">// SICK DROP</span>
+      </div>
+      <button class="btn-close" id="cartCloseBtn" aria-label="Close bag">&times;</button>
+    </div>
+
+    <!-- Free Shipping Progress Tracker -->
+    <div class="shipping-progress-box">
+      <div class="shipping-msg" id="shippingMsg">
+        Add <span>$71.00</span> more to unlock <strong>Free Express Shipping</strong>
+      </div>
+      <div class="shipping-bar-track">
+        <div class="shipping-bar-fill" id="shippingBarFill"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll Area -->
+    <div class="cart-body" id="cartBody">
+      <!-- Items dynamically injected by app.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotal">$49.00</span>
+      </div>
+      <div class="cart-summary-row">
+        <span>Shipping</span>
+        <span style="color: var(--accent-lime);">Calculated Next Step</span>
+      </div>
+      <div class="cart-summary-row total-row">
+        <span>Total</span>
+        <span class="total-amount" id="cartTotal">$49.00</span>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%; border-radius: var(--radius-md);" onclick="showToast('Proceeding to encrypted secure checkout...', 'lime')">
+        Proceed To Checkout ⚡
+      </button>
+
+      <p style="text-align: center; color: var(--text-dim); font-size: 0.75rem; margin-top: 0.8rem;">
+        🔒 Guaranteed 256-Bit Encrypted Checkout
+      </p>
+    </div>
+  </aside>
+
+  <!-- Interactive Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      
+      <div class="modal-image-col">
+        <img class="modal-main-img" id="modalImg" src="" alt="Product Preview">
+      </div>
+
+      <div class="modal-details-col">
+        <span class="modal-category" id="modalCategory">T-Shirts</span>
+        <h3 class="modal-title" id="modalTitle">Acid Overdrive Oversized Tee</h3>
+
+        <div class="modal-price-wrap">
+          <span class="modal-price" id="modalPrice">$49.00</span>
+          <span class="modal-oldPrice" id="modalOldPrice">$85.00</span>
+        </div>
+
+        <p class="modal-desc" id="modalDesc">
+          Constructed from 280GSM heavy combed cotton with signature acid-wash wash-down treatment.
+        </p>
+
+        <div class="size-select-group">
+          <div class="select-label">
+            <span>Select Your Size:</span>
+            <span style="color: var(--accent-lime); font-size: 0.75rem; cursor: pointer;" onclick="showToast('Boxy oversize fit. Take your true size.', 'lime')">Size Guide</span>
+          </div>
+          <div class="size-options">
+            <button class="modal-size-btn" data-size="S">S</button>
+            <button class="modal-size-btn active" data-size="M">M</button>
+            <button class="modal-size-btn" data-size="L">L</button>
+            <button class="modal-size-btn" data-size="XL">XL</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="modalAddBtn" style="width: 100%;">
+          Add To Bag 🛒
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Interactive Application Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
